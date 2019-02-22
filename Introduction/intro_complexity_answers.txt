@@ -1,0 +1,23 @@
+1) An algorithm that has O(1) is a high powered muscle car, and an algorithm that has O(2^n) is a Kia Soul. A muscle car will get you to your destination as fast as possible, and while a Kia Soul might get you from point A to point B, it will definitely take a lot longer, and time is money. That's without considering that Kia Souls, like O(2^n) algorithms, really shouldn't exist.                            
+
+2) Finding the target on the first iteration with the target being the middle value is the best casenario for binary search.
+
+3) Worst casenario is where the target value is as many iterations as possible from the middle. To explain, imagine the target was in the first half. After the firstion iteration, the new range is the beggning to the middle, and instead of being in the middle of that, it's in the top half. Each of those searches is an iteration, and you can easily see how it can become a worst casenario.
+
+4) Average casenario is finding the target within a "middle ground" of iterations. The amount of iterations isn't usually too fast or too slow, but grouped up in the middle most times.
+
+5) https://gyazo.com/de2db7f840c977af75d6075609de4d83 - Screenshot of graph
+
+6) Positive infinity
+
+7) 2^n
+
+8) see './worst_case.rb'
+
+9) https://gyazo.com/3d1553f0eea740291bb97ecf17064d77 - Screenshot of graph
+
+10) O(log n)
+
+11) O(1)
+
+12) O(log n)
