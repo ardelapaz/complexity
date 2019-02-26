@@ -1,0 +1,18 @@
+1) O(1)
+The function just prints out whatever is given as input, proving that the function's worst casenario is just one output, since no matter what it takes in, it just spits it back out.
+
+2) O(n)
+The function here will iterate through each item in the array and then compare it to a value to find the largest value in the collection. Since the function checks every value in the collection, the Big-O for this is linear. The amount of iterations are directly perportional to it's collection size.
+
+3) O(n^2)
+There are two loops, which means full iteration through two whole collections, which is O(n^2)
+
+4) O(n! + (n-1)!)
+Without regarding the first two if statements, which just check the first two values of factoral, the last statement's first return is factoral, while the second part of it is factoral - 1, which is why it's big O is as follows.
+
+
+5) O(n)
+With only loop, the function iterates through depending on what number you input, making it linearly scalable.
+
+6) O(n^2)
+Two loops that repeat recursively, meaning that for each number it'll run through the function with the two loops and have a O(n^2)
