@@ -7,9 +7,8 @@ The function here will iterate through each item in the array and then compare i
 3) O(n^2)
 There are two loops, which means full iteration through two whole collections, which is O(n^2)
 
-4) O(n! + (n-1)!)
-Without regarding the first two if statements, which just check the first two values of factoral, the last statement's first return is factoral, while the second part of it is factoral - 1, which is why it's big O is as follows.
-
+4) O(2^n)
+This function is Fibonacci, and linearly it is O(n-1) + O(n-2) + O(1), but recursively it is just O(2^n) which also simplifies to the golden ratio, so it takes exponential time.
 
 5) O(n)
 With only loop, the function iterates through depending on what number you input, making it linearly scalable.
