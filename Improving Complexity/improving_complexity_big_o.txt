@@ -1,0 +1,7 @@
+1) O(n^2) 
+
+2) O(n^2)  
+
+3) O(n^2)
+
+Overall BigO didn't change, but accumalative BigO did. Instead of being O(n^2) + O(n^2), it is just now O(n) + O(n^2), but we really only care about the fastest growing term, which is O(n^2). 
