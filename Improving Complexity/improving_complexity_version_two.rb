@@ -4,22 +4,25 @@ class Two
             arrays.each do |array|
                 combined_array.concat(array)
             end
-        end
-        sorted_array = [combined_array.delete_at(combined_array.length-1)]
+            # puts "This is the combined array\n#{combined_array}\n"
+            sorted_array = [combined_array.delete_at(combined_array.length-1)]
     
-        combined_array.each do |val, i|
-          while i < sorted_array.length
-              if val <= sorted_array[i]
-                    sorted_array.insert(i,val)
-                  break
-              elsif i == sorted_array.length - 1
-                  sorted_array << val
-                  break
+            for val in combined_array
+                i = 0
+                while i < sorted_array.length
+                  if val <= sorted_array[i]
+                    sorted_array.insert(i, val)
+                    break
+                  elsif i == sorted_array.length - 1
+                    sorted_array << val
+                    break
+                  end
+                  i+=1
+                end
               end
+              sorted_array
           end
-      end
-          sorted_array 
-    end
+        end
 
 test = Two.new
 arrays = Array.new
@@ -35,4 +38,11 @@ arrays.push([24, 20, 12, 50, 16])
 arrays.push([28, 9, 45, 23, 11])
 arrays.push([21, 47, 37, 29, 32])
 test.version_two(arrays)
+
+# puts "this is arrays before function call\n#{arrays}\n"
+answer = test.version_two(arrays)
+# puts "This is answer\n#{answer}\n"
+sorted_array = [1, 2, 2, 4, 7, 9, 9, 11, 11, 12, 12, 14, 15, 15, 15, 16, 16, 19, 20, 20, 21, 21, 21, 22, 23, 23, 24, 25, 26, 27, 28, 28, 29, 29, 30, 31, 32, 33, 33, 34, 37, 37, 38, 38, 39, 40, 41, 42, 43, 43, 45, 47, 47, 48, 50]
+
+puts answer === sorted_array ? 'Test case passed' : 'Test case failed'
 

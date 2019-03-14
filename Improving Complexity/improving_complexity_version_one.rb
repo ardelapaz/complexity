@@ -1,11 +1,8 @@
 class One 
   def version_one(arrays)
     combined_array = Array.new
-      puts "this is arrays: #{arrays}"
         arrays.each do |array|      
-          puts "This is array #{array}"
             array.each do |value|
-              puts "this is value #{value}"
               combined_array.push(value)
         end
     end
@@ -23,14 +20,14 @@ class One
           end
           i+=1
         end
+      end
       sorted_array
-    end
   end
 end
 
 test = One.new
 arrays = Array.new
-arrays.push([2, 9, 21, 33, 47])
+arrays.push([3, 9, 21, 33, 47])
 arrays.push([12, 48, 2, 28, 16])
 arrays.push([20, 38, 7, 29, 11])
 arrays.push([34, 42, 19, 43, 38])
@@ -41,5 +38,11 @@ arrays.push([39, 22, 15, 37, 26])
 arrays.push([24, 20, 12, 50, 16])
 arrays.push([28, 9, 45, 23, 11])
 arrays.push([21, 47, 37, 29, 32])
-test.version_one(arrays)
+
+# puts "this is arrays before function call #{arrays}\n"
+answer = test.version_one(arrays)
+# puts "This is answer#{answer}\n"
+sorted_array = [1,2,3,4,7,9,9,11,11,12,12,14,15,15,15,16,16,19,20,20,21,21,21,22,23,23,24,25,26,27,28,28,29,29,30,31,32,33,33,34,37,37,38,38,39,40,41,42,43,43,45,47,47,48,50]
+
+puts answer === sorted_array ? 'Test case passed' : 'Test case failed'
 
