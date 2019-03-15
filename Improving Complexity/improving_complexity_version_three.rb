@@ -9,24 +9,32 @@ class Three
                     end
                 end
             end
-            sorted_array = [combined_array.delete_at(combined_array.length-1)]
-            
-            for val in combined_array
-                i = 0
-                while i < sorted_array.length
-                    if val <= sorted_array[i]
-                      sorted_array.insert(i, val)
-                      break
-                    elsif i == sorted_array.length - 1
-                      sorted_array << val
-                      break
-                    end
-                  i+=1
-                end
-            end
-        sorted_array
+        quick_sort(combined_array)
     end
-end
+
+            def quick_sort(array, from=0, to=nil)
+                if array.length <= 1
+                  return array
+                end
+              
+                to = array.length-1 if to == nil
+                return array if from >= to
+              
+                pivot = array.delete_at(array.length-1)
+                left = Array.new 
+                right = Array.new 
+              
+                array.each do |x| 
+                  if x >= pivot
+                    right << x
+                  else
+                    left << x 
+                  end
+                end
+                test = quick_sort(left).flatten, pivot, quick_sort(right).flatten
+                  return test.flatten!
+              end
+        end
     
 test = Three.new
 arrays = Array.new
