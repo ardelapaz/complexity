@@ -1,0 +1,7 @@
+1) O(n^2) 
+
+2) O(nlog(n))
+
+3) O(nlog(n))
+
+With the usage of a different sorting algorithm starting in version two, the function now has a BigO of O(nlog(n)) on average. Absolute worst case is still O(n^2) but that casenario is rare and is typically just O(nlog(n)) 
